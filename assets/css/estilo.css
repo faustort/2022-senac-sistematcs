@@ -1,0 +1,61 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+// div {
+//   padding: 10px;
+// }
+
+/* Grid System*/
+.container {
+  max-width: 1130px;
+  //   border: 1px solid red;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+}
+.grid div {
+  //   border: 1px solid green;
+}
+.grid > div {
+//   border: 1px solid pink;
+}
+.grid.col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid.col-3-sidebar {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+@media (min-width: 768px) {
+}
+@media (max-width: 768px) {
+  .grid.col-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.text-center {
+  text-align: center;
+}
+/* Cabeçalho / Menu */
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Fonts Tipografia */
+h1 {
+  font-size: 1.75rem;
+}
