@@ -1,3 +1,6 @@
+<?php
+include 'header.php';
+?>
 <div class="container">
     <div class="grid col-2">
         <div>
@@ -16,3 +19,6 @@
         <div>Direita</div>
     </div>
 </div>
+<?php
+include 'footer.php';
+?>
