@@ -1,10 +1,16 @@
 <?php
+$title = "Este é o index";
 include 'header.php';
 ?>
 <div class="container">
     <div class="grid col-2">
         <div>
-            <div>Esquerda</div>
+            <?php
+            $consulta = $pdo->query("SELECT * from usuarios");
+            while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+                echo $linha['nome'] . "<br>";
+            }
+            ?>
         </div>
         <div>Direita</div>
     </div>
