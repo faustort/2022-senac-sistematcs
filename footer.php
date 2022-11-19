@@ -1,8 +1,10 @@
-<footer>
-    <div class="grid col-3 container">
-        <div>Barra rodapé 1</div>
-        <div>Barra rodapé 2</div>
-        <div>Barra rodapé 3</div>
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">Barra rodapé 1</div>
+            <div class="col-md-4">Barra rodapé 2</div>
+            <div class="col-md-4">Barra rodapé 3</div>
+        </div>
     </div>
 </footer>
 
