@@ -2,6 +2,8 @@
 $titulo = "Login";
 include 'header.php';
 
+$aviso = false;
+
 if (isset($_POST['campo_email']) && isset($_POST['campo_senha'])) {
     // echo '<div class="container alert alert-success my-5">Seu cadastro foi realizado com sucesso!</div>';
 
@@ -16,18 +18,25 @@ if (isset($_POST['campo_email']) && isset($_POST['campo_senha'])) {
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($usuario) {
-        echo 'Você logou com sucesso!!!';
+        $aviso =  'Você logou com sucesso!!!';
     } else {
-        echo 'Usuário ou senha não encontrado';
+        $aviso =  'Usuário ou senha não encontrado';
     }
 } else {
-    echo 'Usuário ou senha não encontrado';
+    // echo 'Usuário ou senha não encontrado';
 }
 
 
 ?>
 
-<div class="container">
+<div class="container py-5">
+    <?php
+
+    if ($aviso) {
+        echo '<div class="alert alert-success mb-5">' . $aviso . '</div>';
+    }
+    ?>
+
     <form method="post">
         <div class="mb-3">
             <label for="input_email" class="form-label">Digite seu e-mail</label>
