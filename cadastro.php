@@ -29,12 +29,7 @@ if (isset($_POST['campo_email']) && isset($_POST['campo_senha']) && isset($_POST
 
 
 ?>
-<!-- 
-<pre>
-    <?php print_r($_POST); ?>    
-</pre> -->
-
-<div class="container">
+<div class="container py-5">
     <form method="post">
         <div class="mb-3">
             <label for="input_email" class="form-label">Digite seu e-mail</label>
