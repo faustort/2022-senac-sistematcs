@@ -12,12 +12,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="sobre.php">Sobre</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cadastro.php">Cadastro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
+                <?php if (!isset($_SESSION['logged'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.php">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                <?php else :  ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
