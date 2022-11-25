@@ -1,4 +1,5 @@
 <?php
+@session_start();
 
 // Definir a variável da raiz do site
 define("URL_BASE", "http://localhost/sistematcs/");
