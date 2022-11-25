@@ -48,7 +48,7 @@ if (isset($_POST['campo_email']) && isset($_POST['campo_senha'])) {
         echo '<div class="alert alert-success mb-5">' . $aviso . '</div>';
     }
 
-    if (isset($_SESSION['logged'])) :
+    if (!isset($_SESSION['logged'])) :
     ?>
 
         <form method="post">

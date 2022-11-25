@@ -1,11 +1,9 @@
 <?php
 include __DIR__ . "./header.php";
 ?>
-<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buscaDados(14)">
     Info dados Ana
 </button>
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
