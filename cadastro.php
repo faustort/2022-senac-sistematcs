@@ -14,7 +14,7 @@ include 'header.php';
 
 if (isset($_POST['campo_email']) && isset($_POST['campo_senha']) && isset($_POST['campo_aceito'])) {
     echo '<div class="container alert alert-success my-5">Seu cadastro foi realizado com sucesso!</div>';
-    $sql = "insert into usuarios (email, senha) values (:email, :senha)";
+    $sql = "insert into usuarios (nome, email, senha) values (:nome, :email, :senha)";
     $stmt = $pdo->prepare($sql);
 
 
@@ -22,6 +22,7 @@ if (isset($_POST['campo_email']) && isset($_POST['campo_senha']) && isset($_POST
 
     $senha = md5(KEY . $senha);
 
+    $stmt->bindParam(':nome', $_POST['campo_nome']);
     $stmt->bindParam(':email', $_POST['campo_email']);
     $stmt->bindParam(':senha', $senha);
     $stmt->execute();
@@ -31,6 +32,10 @@ if (isset($_POST['campo_email']) && isset($_POST['campo_senha']) && isset($_POST
 ?>
 <div class="container py-5">
     <form method="post">
+        <div class="mb-3">
+            <label for="input_nome" class="form-label">Digite seu nome</label>
+            <input type="text" name="campo_nome" class="form-control" id="input_nome">
+        </div>
         <div class="mb-3">
             <label for="input_email" class="form-label">Digite seu e-mail</label>
             <input type="email" name="campo_email" class="form-control" id="input_email" aria-describedby="emailHelp">

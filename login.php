@@ -7,7 +7,7 @@ $aviso = false;
 if (isset($_POST['campo_email']) && isset($_POST['campo_senha'])) {
     // echo '<div class="container alert alert-success my-5">Seu cadastro foi realizado com sucesso!</div>';
 
-    $sql = "select * from usuarios where email = :email and senha = :senha";
+    $sql = "SELECT * FROM usuarios WHERE email = :email and senha = :senha";
     $stmt = $pdo->prepare($sql);
     $senha = $_POST['campo_senha'];
     $senha = md5(KEY . $senha);
