@@ -24,7 +24,7 @@ body {
   //   border: 1px solid green;
 }
 .grid > div {
-//   border: 1px solid pink;
+  //   border: 1px solid pink;
 }
 .grid.col-2 {
   grid-template-columns: 1fr 1fr;

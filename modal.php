@@ -16,7 +16,7 @@ include __DIR__ . "./header.php";
 </div>
 <script>
     function buscaDados(idUsu) {
-        fetch('<?php echo URL_BASE; ?>api.php?idUsu=' + idUsu)
+        fetch('<?php echo URL_BASE; ?>api.php?acao=retorna&idUsu=' + idUsu)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
